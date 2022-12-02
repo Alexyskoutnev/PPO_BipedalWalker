@@ -60,20 +60,18 @@ def train(args):
             # next_obs, reward, done, _ = env.step(action)
             next_obs, reward, done, _ = env.step(action.numpy()[0])
             epoch_return += reward
+            # breakpoint()
             path.add(obs, action, next_obs, reward, done, action_logprob.item(), value.item())
             if done == True:
                 break
             obs = next_obs
             agent.timesteps += 1
-            if agent.timesteps % args['decay_timestep'] == 0:
-                # breakpoint()
-                print("decay")
-                agent.decaySTD()
+            # if agent.timesteps % args['decay_timestep'] == 0:
+            #     # breakpoint()
+            #     print("decay")
+            #     agent.decaySTD()
             i += 1
 
-        print(f"total epc steps {i}")
-        print(f"agent timestep {agent.timesteps}")
-        # breakpoint()
         cum_rewards.append(epoch_return)
         loss_pi, loss_critic = agent.update(path.obs, path.action, path.reward, path.next_obs, path.done, path.action_logprob, path.value)
         print(f"[{epoch}]: loss_pi {loss_pi} \t loss_critic {loss_critic}")
@@ -159,7 +157,8 @@ def eval(env, agent, args):
             if args['render']:
                 env.render()
             state = torch.tensor(np.expand_dims(obs, axis=0), dtype=torch.float32)
-            action, _, _ = agent.forward(state)
+            action, _, _ = agent.forward(state, noise=False)
+            # breakpoint()
             # breakpoint()
             # next_state, reward, done, _ = env.step(action)
             next_obs, reward, done, _ = env.step(action.numpy()[0])
@@ -189,15 +188,15 @@ if __name__ == "__main__":
     parser.add_argument('-a', '--algorithm', type=str, help='agent algorithm', default="ppo")
     parser.add_argument('-env', type=str, default='BipedalWaler-v2')
     parser.add_argument('-act', "--activation", type=str, default="ReLU")
-    parser.add_argument('-l', '--layers', type=list, default=[64, 64, 64])
+    parser.add_argument('-l', '--layers', type=list, default=[128, 128])
     parser.add_argument('-lr','--learning_rate', type=float, default=10e-3)
-    parser.add_argument('-ep', '--epochs', type=int, default=2000)
+    parser.add_argument('-ep', '--epochs', type=int, default=5000)
     parser.add_argument('-st', '--steps', type=int, default=2048)
     parser.add_argument('-g', '--gamma', type=float, default=0.99)
-    parser.add_argument('-b', '--batch', type=int, default=64)
+    parser.add_argument('-b', '--batch', type=int, default=128)
     parser.add_argument('-n', '--noise', type=float, default=0.1)
     parser.add_argument('-tc', '--test_cycles', type=int, default=2000)
-    parser.add_argument('-ti', '--test_every_epoch', type=int, default=25)
+    parser.add_argument('-ti', '--test_every_epoch', type=int, default=50)
     parser.add_argument('-eval_ep', '--eval_epoch', type=int, default=5)
     parser.add_argument('-eval_st', '--eval_steps', type=int, default=500)
     parser.add_argument("--off-render", dest="render", action="store_false", help="turn off rendering")
@@ -210,9 +209,12 @@ if __name__ == "__main__":
 
 
     parser.add_argument("-entr", "--entropy", type=float, default=0.01)
-    parser.add_argument("-k", "--policy_updates", type=int, default=4)
+    parser.add_argument("-k", "--policy_updates", type=int, default=5)
     parser.add_argument("-a_lr", "--actor_lr", type=float, default=10e-4)
     parser.add_argument("-c_lr", "--critic_lr", type=float, default=10e-4)
     parser.add_argument("-clip", "--esp_clip", type=float, default=0.2)
+    parser.add_argument("-grad_c", "--grad_clip", type=float, default=0.5)
+
     args = vars(parser.parse_args())
+    print("\rHYPERPARAMETERS ", args)
     train(args)
