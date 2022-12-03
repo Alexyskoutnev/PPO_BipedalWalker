@@ -1,93 +1,71 @@
-name: rllib
+name: bipedal
 channels:
-  - conda-forge
+  - pytorch
+  - defaults
 dependencies:
-  - aom=3.5.0=h7ea286d_0
-  - bzip2=1.0.8=h3422bc3_4
-  - c-ares=1.18.1=h3422bc3_0
-  - ca-certificates=2022.9.24=h4653dfc_0
-  - cairo=1.16.0=h73a0509_1014
-  - expat=2.5.0=hb7217d7_0
-  - ffmpeg=5.1.2=gpl_hf4c414c_103
-  - font-ttf-dejavu-sans-mono=2.37=hab24e00_0
-  - font-ttf-inconsolata=3.000=h77eed37_0
-  - font-ttf-source-code-pro=2.038=h77eed37_0
-  - font-ttf-ubuntu=0.83=hab24e00_0
-  - fontconfig=2.14.1=h82840c6_0
-  - fonts-conda-ecosystem=1=0
-  - fonts-conda-forge=1=0
-  - freetype=2.12.1=hd633e50_0
-  - gettext=0.21.1=h0186832_0
-  - gmp=6.2.1=h9f76cd9_0
-  - gnutls=3.7.8=h9f1a10d_0
-  - graphite2=1.3.13=h9f76cd9_1001
-  - grpcio=1.49.1=py38h9dcc83b_1
-  - harfbuzz=5.3.0=hddbc195_0
-  - hdf5=1.12.2=nompi_h33dac16_100
-  - icu=70.1=h6b3803e_0
-  - jasper=2.0.33=hba35424_0
-  - jpeg=9e=he4db4b2_2
-  - krb5=1.19.3=he492e65_0
-  - lame=3.100=h1a8c8d9_1003
-  - lerc=4.0.0=h9a09cb3_0
-  - libabseil=20220623.0=cxx17_h28b99d4_5
-  - libblas=3.9.0=16_osxarm64_openblas
-  - libcblas=3.9.0=16_osxarm64_openblas
-  - libcurl=7.86.0=h1c293e1_1
-  - libcxx=14.0.6=h2692d47_0
-  - libdeflate=1.14=h1a8c8d9_0
-  - libedit=3.1.20191231=hc8eb9b7_2
-  - libev=4.33=h642e427_1
-  - libffi=3.4.2=h3422bc3_5
-  - libgfortran=5.0.0=11_3_0_hd922786_26
-  - libgfortran5=11.3.0=hdaf2cc0_26
-  - libglib=2.74.1=h4646484_1
-  - libgrpc=1.49.1=h55edf5b_1
-  - libiconv=1.17=he4db4b2_0
-  - libidn2=2.3.4=h1a8c8d9_0
-  - liblapack=3.9.0=16_osxarm64_openblas
-  - liblapacke=3.9.0=16_osxarm64_openblas
-  - libnghttp2=1.47.0=h519802c_1
-  - libopenblas=0.3.21=openmp_hc731615_3
-  - libopencv=4.6.0=py38h6e4ee2f_6
-  - libpng=1.6.38=h76d750c_0
-  - libprotobuf=3.21.9=hb5ab8b9_0
-  - libsqlite=3.39.4=h76d750c_0
-  - libssh2=1.10.0=h7a5bd25_3
-  - libtasn1=4.19.0=h1a8c8d9_0
-  - libtiff=4.4.0=hfa0b094_4
-  - libunistring=0.9.10=h3422bc3_0
-  - libvpx=1.11.0=hc470f4d_3
-  - libwebp-base=1.2.4=h57fd34a_0
-  - libxml2=2.10.3=h87b0503_0
-  - libzlib=1.2.13=h03a7124_4
-  - llvm-openmp=15.0.4=h7cfbb63_0
-  - ncurses=6.3=h07bb92c_1
-  - nettle=3.8.1=h63371fa_1
-  - numpy=1.23.4=py38h09ac2d9_1
-  - opencv=4.6.0=py38h150bfb4_6
-  - openh264=2.3.1=hb7217d7_1
-  - openssl=3.0.7=h03a7124_0
-  - p11-kit=0.24.1=h29577a5_0
-  - pcre2=10.40=hb34f9b4_0
-  - pip=22.3.1=pyhd8ed1ab_0
-  - pixman=0.40.0=h27ca646_0
-  - py-opencv=4.6.0=py38hfbcc8b7_6
-  - python=3.8.13=hd3575e6_0_cpython
-  - python_abi=3.8=2_cp38
-  - re2=2022.06.01=h9a09cb3_0
-  - readline=8.1.2=h46ed386_0
-  - six=1.16.0=pyh6c4a22f_0
-  - sqlite=3.39.4=h2229b38_0
-  - svt-av1=1.3.0=h7ea286d_0
-  - swig=4.1.0=h799ce0a_4
-  - tk=8.6.12=he1e0b03_0
-  - wheel=0.38.4=pyhd8ed1ab_0
-  - x264=1!164.3095=h57fd34a_2
-  - x265=3.5=hbc6ce65_3
-  - xz=5.2.6=h57fd34a_0
-  - zlib=1.2.13=h03a7124_4
-  - zstd=1.5.2=h8128057_4
+  - blas=1.0=mkl
+  - brotlipy=0.7.0=py38h9ed2024_1003
+  - bzip2=1.0.8=h1de35cc_0
+  - ca-certificates=2022.10.11=hecd8cb5_0
+  - certifi=2022.9.24=py38hecd8cb5_0
+  - cffi=1.15.1=py38hc55c11b_0
+  - cryptography=38.0.1=py38hf6deb26_0
+  - ffmpeg=4.3=h0a44026_0
+  - freetype=2.12.1=hd8bbffd_0
+  - gettext=0.21.0=h7535e17_0
+  - giflib=5.2.1=haf1e3a3_0
+  - gmp=6.2.1=he9d5cce_3
+  - gnutls=3.6.15=hed9c0bf_0
+  - icu=58.2=h0a44026_3
+  - idna=3.4=py38hecd8cb5_0
+  - intel-openmp=2021.4.0=hecd8cb5_3538
+  - jpeg=9e=hca72f7f_0
+  - lame=3.100=h1de35cc_0
+  - lcms2=2.12=hf1fd2bf_0
+  - lerc=3.0=he9d5cce_0
+  - libcxx=14.0.6=h9765a3e_0
+  - libdeflate=1.8=h9ed2024_5
+  - libffi=3.3=hb1e8313_2
+  - libiconv=1.16=hca72f7f_2
+  - libidn2=2.3.2=h9ed2024_0
+  - libpng=1.6.37=ha441bb4_0
+  - libtasn1=4.16.0=h9ed2024_0
+  - libtiff=4.4.0=h2cd0358_2
+  - libunistring=0.9.10=h9ed2024_0
+  - libwebp=1.2.4=h56c3ce4_0
+  - libwebp-base=1.2.4=hca72f7f_0
+  - libxml2=2.9.14=hbf8cd5e_0
+  - llvm-openmp=14.0.6=h0dcd299_0
+  - lz4-c=1.9.3=h23ab428_1
+  - mkl=2021.4.0=hecd8cb5_637
+  - mkl-service=2.4.0=py38h9ed2024_0
+  - mkl_fft=1.3.1=py38h4ab4a9b_0
+  - mkl_random=1.2.2=py38hb2f4e1b_0
+  - ncurses=6.3=hca72f7f_3
+  - nettle=3.7.3=h230ac6f_1
+  - numpy-base=1.23.4=py38h9cd3388_0
+  - openh264=2.1.1=h8346a28_0
+  - openssl=1.1.1s=hca72f7f_0
+  - pillow=9.2.0=py38hde71d04_1
+  - pip=22.2.2=py38hecd8cb5_0
+  - pycparser=2.21=pyhd3eb1b0_0
+  - pyopenssl=22.0.0=pyhd3eb1b0_0
+  - pysocks=1.7.1=py38_1
+  - python=3.8.15=h4319210_0
+  - pytorch=1.13.0=py3.8_0
+  - readline=8.2=hca72f7f_0
+  - requests=2.28.1=py38hecd8cb5_0
+  - setuptools=65.5.0=py38hecd8cb5_0
+  - six=1.16.0=pyhd3eb1b0_1
+  - sqlite=3.39.3=h707629a_0
+  - tk=8.6.12=h5d9f67b_0
+  - torchvision=0.14.0=py38_cpu
+  - typing_extensions=4.3.0=py38hecd8cb5_0
+  - urllib3=1.26.12=py38hecd8cb5_0
+  - wheel=0.37.1=pyhd3eb1b0_0
+  - xz=5.2.6=hca72f7f_0
+  - zlib=1.2.13=h4dc903c_0
+  - zstd=1.5.2=hcb37349_0
   - pip:
     - absl-py==1.3.0
     - aiosignal==1.3.1
@@ -99,7 +77,6 @@ dependencies:
     - autorom-accept-rom-license==0.4.2
     - box2d-py==2.3.8
     - cachetools==5.2.0
-    - certifi==2022.9.24
     - charset-normalizer==2.1.1
     - click==8.0.4
     - cloudpickle==2.2.0
@@ -112,22 +89,22 @@ dependencies:
     - google-auth==2.14.1
     - google-auth-oauthlib==0.4.6
     - google-pasta==0.2.0
+    - grpcio==1.50.0
     - gym==0.23.1
     - gym-notices==0.0.8
     - h5py==3.7.0
-    - idna==3.4
     - imageio==2.22.4
     - importlib-metadata==5.0.0
     - importlib-resources==5.10.0
     - jsonschema==4.17.0
-    - keras==2.10.0
-    - keras-preprocessing==1.1.2
+    - keras==2.11.0
     - libclang==14.0.6
     - lz4==4.0.2
     - markdown==3.4.1
     - markupsafe==2.1.1
     - msgpack==1.0.4
     - networkx==2.8.8
+    - numpy==1.23.5
     - oauthlib==3.2.2
     - opt-einsum==3.3.0
     - pandas==1.5.1
@@ -142,27 +119,23 @@ dependencies:
     - pywavelets==1.4.1
     - pyyaml==6.0
     - ray==2.1.0
-    - requests==2.28.1
     - requests-oauthlib==1.3.1
     - rsa==4.9
     - scikit-image==0.19.3
     - scipy==1.9.3
-    - setuptools==65.5.1
     - tabulate==0.9.0
     - tensorboard==2.10.1
     - tensorboard-data-server==0.6.1
     - tensorboard-plugin-wit==1.8.1
     - tensorboardx==2.5.1
     - tensorflow-estimator==2.10.0
-    - tensorflow-macos==2.10.0
-    - termcolor==2.1.0
+    - tensorflow-io-gcs-filesystem==0.28.0
+    - termcolor==2.1.1
     - tifffile==2022.10.10
-    - torch==1.13.0
     - tqdm==4.64.1
     - typing-extensions==4.4.0
-    - urllib3==1.26.12
     - virtualenv==20.16.7
     - werkzeug==2.2.2
     - wrapt==1.14.1
     - zipp==3.10.0
-prefix: /Users/alexy/miniforge3/envs/rllib
+prefix: /Users/alexy/opt/anaconda3/envs/bipedal

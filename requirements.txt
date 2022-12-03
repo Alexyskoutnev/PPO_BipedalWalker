@@ -10,11 +10,14 @@ AutoROM==0.4.2
 AutoROM.accept-rom-license==0.4.2
 backcall==0.2.0
 box2d-py==2.3.8
+brotlipy==0.7.0
 cachetools==5.2.0
-certifi==2022.9.24
+certifi @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_0ek9yztvu3/croot/certifi_1665076692562/work/certifi
+cffi @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_62rp5d8fd4/croots/recipe/cffi_1659598655556/work
 charset-normalizer==2.1.1
 click==8.0.4
 cloudpickle==2.2.0
+cryptography @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_3evwafgyg8/croot/cryptography_1665612651044/work
 cycler==0.11.0
 decorator==5.1.1
 distlib==0.3.6
@@ -28,11 +31,11 @@ gast==0.4.0
 google-auth==2.14.1
 google-auth-oauthlib==0.4.6
 google-pasta==0.2.0
-grpcio @ file:///Users/runner/miniforge3/conda-bld/grpc-split_1667193541417/work
+grpcio==1.50.0
 gym==0.23.1
 gym-notices==0.0.8
 h5py==3.7.0
-idna==3.4
+idna @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_00jf0h4zbt/croot/idna_1666125573348/work
 imageio==2.22.4
 importlib-metadata==5.0.0
 importlib-resources==5.10.0
@@ -40,8 +43,7 @@ inputs==0.5
 ipython==8.5.0
 jedi==0.18.1
 jsonschema==4.17.0
-keras==2.10.0
-Keras-Preprocessing==1.1.2
+keras==2.11.0
 kiwisolver==1.4.4
 libclang==14.0.6
 lz4==4.0.2
@@ -49,11 +51,13 @@ Markdown==3.4.1
 MarkupSafe==2.1.1
 matplotlib==3.5.3
 matplotlib-inline==0.1.6
+mkl-fft==1.3.1
+mkl-random @ file:///opt/concourse/worker/volumes/live/f196a661-8e33-4aac-63bc-efb2ff50e035/volume/mkl_random_1626186080069/work
+mkl-service==2.4.0
 msgpack==1.0.4
 networkx==2.8.8
-numpy @ file:///Users/runner/miniforge3/conda-bld/numpy_1666788296736/work
+numpy==1.23.5
 oauthlib==3.2.2
-opencv-python==4.6.0
 opt-einsum==3.3.0
 packaging==21.3
 pandas==1.5.1
@@ -70,16 +74,19 @@ pure-eval==0.2.2
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pybullet==3.2.5
+pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
 pygame==2.1.2
 Pygments==2.13.0
+pyOpenSSL @ file:///opt/conda/conda-bld/pyopenssl_1643788558760/work
 pyparsing==3.0.9
 pyrsistent==0.19.2
+PySocks @ file:///opt/concourse/worker/volumes/live/85a5b906-0e08-41d9-6f59-084cee4e9492/volume/pysocks_1594394636991/work
 python-dateutil==2.8.2
 pytz==2022.6
 PyWavelets==1.4.1
 PyYAML==6.0
 ray==2.1.0
-requests==2.28.1
+requests @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_516b78ce-034d-4395-b9b5-1d78c2847384qtnol99l/croots/recipe/requests_1657734628886/work
 requests-oauthlib==1.3.1
 rsa==4.9
 scikit-image==0.19.3
@@ -92,14 +99,15 @@ tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.1
 tensorboardX==2.5.1
 tensorflow-estimator==2.10.0
-tensorflow-macos==2.10.0
-termcolor==2.1.0
+tensorflow-io-gcs-filesystem==0.28.0
+termcolor==2.1.1
 tifffile==2022.10.10
 torch==1.13.0
+torchvision==0.14.0
 tqdm==4.64.1
 traitlets==5.4.0
 typing_extensions==4.4.0
-urllib3==1.26.12
+urllib3 @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_7f7kb5tudl/croot/urllib3_1666298941688/work
 virtualenv==20.16.7
 wcwidth==0.2.5
 Werkzeug==2.2.2
